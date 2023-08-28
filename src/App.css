@@ -1,0 +1,46 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label {
+  width: 100%;
+  border: 2px solid black;
+  padding: 2em;
+}
+
+input {
+  display: none;
+}
+
+.inner-text {
+  display: none;
+  margin: 1.5em 0 0 1.5em;
+}
+
+label:has(input:checked) .inner-text {
+  display: block;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  margin-right: 10px;
+  -webkit-transform: rotate(-45deg);
+}
+
+label:has(input:checked) .arrow {
+  top: 0;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+}
